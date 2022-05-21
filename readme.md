@@ -1,3 +1,17 @@
+<h1 align="center">
+⚠️ This is an unofficial fork ⚠️
+</h1>
+
+This fork contains changes from the following PRs:
+- https://github.com/anuraghazra/github-readme-stats/pull/1778
+- https://github.com/anuraghazra/github-readme-stats/pull/1653
+
+**This fork is not actively maintained!**
+
+If you're looking for the _real_ `github-readme-stats`, please see the [official repo](https://github.com/anuraghazra/github-readme-stats).
+
+---
+
 <p align="center">
  <img width="100px" src="https://res.cloudinary.com/anuraghazra/image/upload/v1594908242/logo_ccswme.svg" align="center" alt="GitHub Readme Stats" />
  <h2 align="center">GitHub Readme Stats</h2>
