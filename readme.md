@@ -3,8 +3,8 @@
 </h1>
 
 This fork contains changes from the following PRs:
-- https://github.com/anuraghazra/github-readme-stats/pull/1778
-- https://github.com/anuraghazra/github-readme-stats/pull/1653
+- [ ] https://github.com/anuraghazra/github-readme-stats/pull/1778
+- [ ] https://github.com/anuraghazra/github-readme-stats/pull/1653
 
 **This fork is not actively maintained!**
 
