@@ -22,6 +22,7 @@ const data_langs = {
           },
           {
             name: "test-repo-2",
+            isArchived: true,
             languages: {
               edges: [{ size: 100, node: { color: "#0f0", name: "HTML" } }],
             },
@@ -36,12 +37,13 @@ const data_langs = {
           },
           {
             name: "test-repo-4",
+            isArchived: true,
             languages: {
               edges: [
                 { size: 100, node: { color: "#0ff", name: "javascript" } },
               ],
             },
-          },
+          }
         ],
       },
     },
@@ -92,6 +94,24 @@ describe("FetchTopLanguages", () => {
         color: "#0ff",
         name: "javascript",
         size: 200,
+      },
+    });
+  });
+
+  it("should fetch correct language data while excluding archived repositories", async () => {
+    mock.onPost("https://api.github.com/graphql").reply(200, data_langs);
+
+    let repo = await fetchTopLanguages("anuraghazra", exclude_archived=true);
+    expect(repo).toStrictEqual({
+      HTML: {
+        color: "#0f0",
+        name: "HTML",
+        size: 100,
+      },
+      javascript: {
+        color: "#0ff",
+        name: "javascript",
+        size: 100,
       },
     });
   });
