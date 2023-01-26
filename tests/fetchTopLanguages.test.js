@@ -43,7 +43,7 @@ const data_langs = {
                 { size: 100, node: { color: "#0ff", name: "javascript" } },
               ],
             },
-          }
+          },
         ],
       },
     },
@@ -101,7 +101,7 @@ describe("FetchTopLanguages", () => {
   it("should fetch correct language data while excluding archived repositories", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_langs);
 
-    let repo = await fetchTopLanguages("anuraghazra", exclude_repo=[], exclude_archived=true);
+    let repo = await fetchTopLanguages("anuraghazra", [], true);
     expect(repo).toStrictEqual({
       HTML: {
         color: "#0f0",
