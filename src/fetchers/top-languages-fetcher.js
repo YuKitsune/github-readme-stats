@@ -56,8 +56,11 @@ const fetcher = (variables, token) => {
  * @param {boolean} exclude_archived
  * @returns {Promise<import("./types").TopLangData>} Top languages data.
  */
-const fetchTopLanguages = async (username, exclude_repo = [], exclude_archived = false) => {
-
+const fetchTopLanguages = async (
+  username,
+  exclude_repo = [],
+  exclude_archived = false,
+) => {
   if (!username) throw new MissingParamError(["username"]);
 
   const res = await retryer(fetcher, { login: username });
